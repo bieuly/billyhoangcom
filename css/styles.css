@@ -167,6 +167,7 @@ body {
     color: white;
     background-color: #839b97;
     padding: 5rem;
+    margin-top: 5rem;
 }
 
 .experience__container {
@@ -177,8 +178,15 @@ body {
     margin-top: 7rem;
 }
 
+.experience__group {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+
 .experience__container .spacing {
     width: 35%;
+    align-self: center;
+    justify-self: center;
 }
 
 .experience__company {
@@ -187,6 +195,17 @@ body {
 
 .experience__role {
     margin-top: 3rem;
+}
+
+.parking {
+    height: 200px;
+    margin-left: 15%;
+}
+
+.about-me-section {
+    color: white;
+    background-color: #34626c;
+    padding: 5rem 20rem;
 }
 
 @keyframes fadeIn {
