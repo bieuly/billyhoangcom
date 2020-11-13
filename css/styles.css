@@ -136,10 +136,57 @@ body {
 }
 
 .triangle-down {
-	height: 10em;
+	height: 7rem;
 	background-color: #34626c;
 	clip-path: polygon(0 0, 100% 0, 100% 20%, 50% 100%, 0 20%);
 	margin-top: -0.5rem;
+}
+
+.section-mid {
+    margin-top: 5rem;
+}
+
+.skills {
+    text-align: center;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.skill {
+    padding: 7rem;
+    transition: all 0.2s;
+}
+
+.skill:hover {
+    transform: rotate(5deg) scale(1.2);
+}
+
+.experience-section {
+    color: white;
+    background-color: #839b97;
+    padding: 5rem;
+}
+
+.experience__container {
+    display: flex;
+}
+
+.experience {
+    margin-top: 7rem;
+}
+
+.experience__container .spacing {
+    width: 35%;
+}
+
+.experience__company {
+    font-size: 3rem;
+}
+
+.experience__role {
+    margin-top: 3rem;
 }
 
 @keyframes fadeIn {
