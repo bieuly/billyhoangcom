@@ -29,54 +29,46 @@ body {
 	line-height: 1.7;
 }
 
-.section-top {
-	background-color: #34626c;
-	height: fit-content;
+.section {
+	padding: 6rem 6rem;
 }
 
 .header {
-	padding-top: 7rem;
-	color: white;
-	/* Need to center headshot */
+	background-color: #34626c;
 	text-align: center;
 }
 
-.header__headshot {
+.header__profile-picture {
 	height: 15rem;
 	clip-path: circle();
 	animation: fadeIn 2s ease-out;
 	transition: all 2s;
 }
 
-.header__headshot:hover {
+.header__profile-picture:hover {
 	transform: rotate(360deg);
 }
 
-/* Re-usable */
+.header__title {
+	color: white;
+	margin-top: 2rem;
+}
+
 .title {
 	letter-spacing: 1rem;
 	text-align: center;
 	font-size: 1.6rem;
 	text-transform: uppercase;
+	font-weight: 600;
 }
 
-.section-top h1 {
-	margin-top: 3rem;
-}
-
-.header__name,
-.header__position {
-	display: block;
-}
-
-.socials {
+.header__btns {
 	margin-top: 4rem;
-	padding-bottom: 2rem;
 }
 
-.socials a {
-	margin-left: 3rem;
+.header__btns a {
 	margin-right: 3rem;
+	margin-left: 3rem;
 	width: 15rem;
 }
 
@@ -135,125 +127,85 @@ body {
 	animation: moveInRight 2.5s ease-out;
 }
 
-.triangle-down {
-	height: 7rem;
-	background-color: #34626c;
-	clip-path: polygon(0 0, 100% 0, 100% 20%, 50% 100%, 0 20%);
-	margin-top: -0.5rem;
-}
-
-.section-mid {
-    margin-top: 5rem;
-}
-
-.skills {
-    text-align: center;
-    margin-top: 5rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+.skills__container {
+	text-align: center;
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 }
 
 .skill {
-    position: relative;
-    height: 30px;
-    width: 30px;
-    align-self: center;
-    justify-self: center;
-    border-radius: 500px;
-    background-color: aqua;
-    padding: 7rem;
-    transition: all 0.2s;
-    margin: 2rem;
-    animation-name: float;
-    animation-direction: alternate-reverse;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
-}
-
-.skill.javascript {
-    animation-delay: 2s;
-}
-
-.skill.react {
-    animation-delay: 1s;
-}
-
-.skill.spring {
-    animation-delay: 1s;
-}
-
-.skill.redux {
-    animation-delay: 3s;
-}
-
-.skill.typescript {
-    animation-delay: 2s;
-}
-
-.skill.java {
-    animation-delay: 1;
-}
-
-.skill.html {
-    animation-delay: 2;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 500px;
+	background-color: aqua;
+	padding: 7rem;
+	transition: all 0.2s;
+	margin: 2rem;
+	animation-name: float;
+	animation-direction: alternate-reverse;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
 }
 
 .skill span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.skill:hover {
-    transform: rotate(5deg) scale(1.2);
+.skills__skill--javascript {
+	animation-delay: 2s;
 }
 
-.experience-section {
-    color: white;
-    background-color: #839b97;
-    padding: 5rem;
-    margin-top: 5rem;
+.skills__skill--react {
+	animation-delay: 1s;
 }
 
-.experience__container {
-    display: flex;
+.skills__skill--spring {
+	animation-delay: 1s;
+}
+
+.skills__skill--redux {
+	animation-delay: 3s;
+}
+
+.skills__skill--typescript {
+	animation-delay: 2s;
+}
+
+.skills__skill--java {
+	animation-delay: 1;
+}
+
+.skills__skill--html {
+	animation-delay: 2;
 }
 
 .experience {
-    margin-top: 7rem;
-}
-
-.experience__group {
-    font-size: 1.5rem;
-    margin-top: 4rem;
-}
-
-.experience__container .spacing {
-    width: 35%;
-    align-self: center;
-    justify-self: center;
+	color: white;
+	background-color: #839b97;
 }
 
 .experience__company {
-    font-size: 3rem;
+	font-size: 3rem;
+	margin-top: 3rem;
 }
 
 .experience__role {
-    margin-top: 3rem;
+	margin-top: 3rem;
 }
 
-.parking {
-    height: 200px;
-    margin-left: 15%;
-}
-
-.about-me-section {
-    color: white;
-    background-color: #34626c;
-    padding: 5rem 20rem;
+.about-me {
+	color: white;
+	background-color: #34626c;
+	padding: 5rem 20rem;
 }
 
 @keyframes fadeIn {
@@ -291,23 +243,23 @@ body {
 }
 
 @keyframes float {
-    from {
-        transform: translateY(15px);
-    }
+	from {
+		transform: translateY(15px);
+	}
 
-    30% {
-        transform: translate(-5px, 5px);
-    }
+	30% {
+		transform: translate(-5px, 5px);
+	}
 
-    50% {
-        transform: translate(10px, 10px);
-    }
+	50% {
+		transform: translate(10px, 10px);
+	}
 
-    80% {
-        transform: translate(-10px, 10px);
-    }
+	80% {
+		transform: translate(-10px, 10px);
+	}
 
-    to {
-        transform: translateY(0);
-    }
+	to {
+		transform: translateY(0);
+	}
 }

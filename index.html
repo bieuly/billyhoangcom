@@ -5,77 +5,47 @@
 </head>
 
 <body>
-    <div class="section-top">
-        <div class="header">
-            <img src="img/headshot.JPG" alt="headshot" class="header__headshot"/>
-            <h1>
-                <span class="header__name title move-in-left">billy hoang</span>
-                <span class="header__position title move-in-right">software developer</span>
-            </h1>
-            <div class="socials">
-                <a href="https://github.com/bieuly" target="__blank" class="btn btn--green">Github</a>
-                <a href="https://www.linkedin.com/in/billyhoang/" target="__blank" class="btn btn--green">Linkedin</a>
-            </div>
+    <section class="section header">
+        <img src="img/profile-picture.JPG" alt="profile picture" class="header__profile-picture"/>
+        <h1 class="header__title title">
+            <p class="title move-in-left">billy hoang</p>
+            <p class="title move-in-right">software developer</p>
+        </h1>
+        <div class="header__btns">
+            <a href="https://github.com/bieuly" target="__blank" class="btn btn--green">Github</a>
+            <a href="https://www.linkedin.com/in/billyhoang/" target="__blank" class="btn btn--green">Linkedin</a>
         </div>
+    </section>
+    <section class="section skills">
+        <header class="skills__title title">Skills</header>
+        <div class="skills__container">
+            <div class="skills__skill--javascript skill"><span>Javascript</span></div>
+            <div class="skills__skill--react skill"><span>React</span></div>
+            <div class="skills__skill--redux skill"><span>Redux</span></div>
+            <div class="skills__skill--typescript skill"><span>Typescript</span></div>
+            <div class="skills__skill--java skill"><span>Java</span></div>
+            <div class="skills__skill--html skill"><span>HTML</span></div>
+            <div class="skills__skill--css skill"><span>CSS</span></div>
+            <div class="skills__skill--spring skill"><span>Spring</span></div>
+        </div>
+    </section>
+    <div class="section experience">
+        <header class="experience__title title">Experience</header>
+        <header class="experience__company">Best Buy Canada</header>
+        <p class="experience__role">Software Developer II</p>
+        <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
+        <p class="experience__role">Software Developer I</p>
+        <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
+        <p class="experience__role">Analyst</p>
+        <p class="experience_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
+        <header class="experience__company">T2 Systems</header>
+        <p class="experience__role">Software Developer Co-op</p>
+        <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
+        <p class="experience__role">QA Automation Co-op</p>
+        <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
     </div>
-    <div class="triangle-down"></div>
-    <div class="section-mid">
-        <h1 class="title">Skills</h1>
-        <div class="skills">
-            <div class="skill javascript"><span>Javascript</span></div>
-            <div class="skill react"><span>React</span></div>
-            <div class="skill redux"><span>Redux</span></div>
-            <div class="skill typescript"><span>Typescript</span></div>
-            <div class="skill java"><span>Java</span></div>
-            <div class="skill html"><span>HTML</span></div>
-            <div class="skill css"><span>CSS</span></div>
-            <div class="skill spring"><span>Spring</span></div>
-        </div>
-    </div>
-    <div class="experience-section">
-        <header class="title">Experience</header>
-        <div class="experience__container">
-            <div class="experience bestbuy">
-                <header class="experience__company">Best Buy Canada</header>
-                <div class="experience__group">
-                    <p class="experience__role">Software Developer II</p>
-                    <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
-                </div>
-                <div class="experience__group">
-                    <p class="experience__role">Software Developer I</p>
-                    <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
-                </div>
-                <div class="experience__group">
-                    <p class="experience__role">Analyst</p>
-                    <p class="experience_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
-                </div>
-            </div>
-            <div class="spacing">
-                <img src="img/shopping-cart.svg" alt="" class="parking">
-            </div>
-        </div>
-        <div class="experience__container">
-                <div class="spacing">
-                    <img src="img/parking.svg" alt="" class="parking">
-                </div>
-                <div class="experience t2">
-                    <header class="experience__company">T2 Systems</header>
-                    <div class="experience__group">
-                        <p class="experience__role">Software Developer Co-op</p>
-                        <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
-                    </div>
-                    <div class="experience__group">
-                        <p class="experience__role">QA Automation Co-op</p>
-                        <p class="experience__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium harum quos? Qui tempore animi beatae ad praesentium est eos magni minima mollitia illum, itaque non quia totam aut veritatis!</p>
-                    </div>
-                </div>
-        </div>
-    </div>
-    <div class="about-me-section">
+    <div class="section about-me">
         <header class="title">About Me</header>
     </div>
-    <!-- Icons made by <a href="https://www.flaticon.com/authors/fjstudio" title="fjstudio">fjstudio</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-    <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 </body>
-
 </html>
