@@ -1,0 +1,198 @@
+@import "keyframes";
+
+$color-dark-grey: #34626c;
+$color-light-blue: aqua;
+$color-text-grey: #777;
+$color-green: #c6b497;
+$color-dark-green: #839b97;
+$color-white: #fff;
+$color-black: #000;
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: $color-text-grey;
+	line-height: 1.7;
+}
+
+.section {
+	padding: 6rem 6rem;
+}
+
+.header {
+	background-color: $color-dark-grey;
+	text-align: center;
+
+	&__profile-picture {
+		height: 15rem;
+		clip-path: circle();
+		animation: fadeIn 2s ease-out;
+		transition: all 2s;
+	}
+
+	&__profile-picture:hover {
+		transform: rotate(360deg);
+	}
+
+	&__title {
+		color: $color-white;
+		margin-top: 2rem;
+	}
+
+	&__btns {
+		margin-top: 4rem;
+	}
+
+	&__btns a {
+		margin-right: 3rem;
+		margin-left: 3rem;
+		width: 15rem;
+	}
+}
+
+.title {
+	letter-spacing: 1rem;
+	text-align: center;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.btn {
+	&:link,
+	&:visited {
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		padding: 1.5rem 4rem;
+		border-radius: 5rem;
+		transition: all 0.2s;
+	}
+
+	/* CONFUSING: Why do I need this hover styling to trigger the hover state of ::after */
+	&:hover {
+		transform: translateY(-0.3rem);
+		box-shadow: 0 10px 20px rgba($color-black, 0.2);
+	}
+
+	&:active {
+		transform: translateY(-0.1rem);
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+	}
+
+	&::after {
+		content: "";
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 5rem;
+		transition: all 0.3s;
+	}
+
+	&:hover::after {
+		transform: scale(1.3);
+	}
+
+	&--green {
+		background-color: $color-green;
+		color: $color-white;
+
+		&::after {
+			background-color: $color-green;
+		}
+	}
+}
+
+.move-in-left {
+	animation: moveInLeft 2.5s ease-out;
+}
+
+.move-in-right {
+	animation: moveInRight 2.5s ease-out;
+}
+
+.skills {
+	text-align: center;
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	&__skill {
+		position: relative;
+		height: 3rem;
+		width: 3rem;
+		align-self: center;
+		justify-self: center;
+		border-radius: 50rem;
+		background-color: $color-light-blue;
+		padding: 7rem;
+		transition: all 0.2s;
+		margin: 2rem;
+		animation-name: float;
+		animation-direction: alternate-reverse;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-out;
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&--react,
+		&--spring,
+		&--java {
+			animation-delay: 1s;
+		}
+
+		&--javascript,
+		&--typescript,
+		&--html {
+			animation-delay: 2s;
+		}
+
+		&--redux {
+			animation-delay: 3s;
+		}
+	}
+}
+
+.experience {
+	color: $color-white;
+	background-color: $color-dark-green;
+
+	&__company {
+		font-size: 3rem;
+		margin-top: 3rem;
+	}
+
+	&__role {
+		margin-top: 3rem;
+	}
+}
+
+.about-me {
+	color: $color-white;
+	background-color: $color-dark-grey;
+	padding: 5rem 20rem;
+}

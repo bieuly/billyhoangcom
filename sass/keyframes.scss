@@ -1,0 +1,55 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes moveInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-1rem);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveInRight {
+	from {
+		opacity: 0;
+		transform: translateX(1rem);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes float {
+	from {
+		transform: translateY(15px);
+	}
+
+	30% {
+		transform: translate(-5px, 5px);
+	}
+
+	50% {
+		transform: translate(10px, 10px);
+	}
+
+	80% {
+		transform: translate(-10px, 10px);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}

@@ -1,265 +1,168 @@
-/* 
-COLORS
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-34626c light navy
-839b97 light grey blue
-cfd3ce cold grey
-c6b497 sand
+@keyframes moveInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
 
-*/
+@keyframes moveInRight {
+  from {
+    opacity: 0;
+    transform: translateX(1rem); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes float {
+  from {
+    transform: translateY(15px); }
+  30% {
+    transform: translate(-5px, 5px); }
+  50% {
+    transform: translate(10px, 10px); }
+  80% {
+    transform: translate(-10px, 10px); }
+  to {
+    transform: translateY(0); } }
 
 *,
 *:after,
 *:before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
-	font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
-	box-sizing: border-box;
-	font-family: sans-serif;
-	font-weight: 400;
-	font-size: 1.6rem;
-	color: #777;
-	line-height: 1.7;
-}
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7; }
 
 .section {
-	padding: 6rem 6rem;
-}
+  padding: 6rem 6rem; }
 
 .header {
-	background-color: #34626c;
-	text-align: center;
-}
-
-.header__profile-picture {
-	height: 15rem;
-	clip-path: circle();
-	animation: fadeIn 2s ease-out;
-	transition: all 2s;
-}
-
-.header__profile-picture:hover {
-	transform: rotate(360deg);
-}
-
-.header__title {
-	color: white;
-	margin-top: 2rem;
-}
+  background-color: #34626c;
+  text-align: center; }
+  .header__profile-picture {
+    height: 15rem;
+    clip-path: circle();
+    animation: fadeIn 2s ease-out;
+    transition: all 2s; }
+  .header__profile-picture:hover {
+    transform: rotate(360deg); }
+  .header__title {
+    color: #fff;
+    margin-top: 2rem; }
+  .header__btns {
+    margin-top: 4rem; }
+  .header__btns a {
+    margin-right: 3rem;
+    margin-left: 3rem;
+    width: 15rem; }
 
 .title {
-	letter-spacing: 1rem;
-	text-align: center;
-	font-size: 1.6rem;
-	text-transform: uppercase;
-	font-weight: 600;
-}
+  letter-spacing: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 600; }
 
-.header__btns {
-	margin-top: 4rem;
-}
-
-.header__btns a {
-	margin-right: 3rem;
-	margin-left: 3rem;
-	width: 15rem;
-}
-
-.btn:link,
-.btn:visited {
-	position: relative;
-	display: inline-block;
-	text-decoration: none;
-	padding: 1.5rem 4rem;
-	border-radius: 5rem;
-	transition: all 0.2s;
-}
-
-/* CONFUSING: Why do I need this hover styling to trigger the hover state of ::after */
-.btn:hover {
-	transform: translateY(-0.3rem);
-	box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
-}
-
-.btn:active {
-	transform: translateY(-0.1rem);
-	box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
-}
-
-.btn::after {
-	content: "";
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	border-radius: 5rem;
-	transition: all 0.3s;
-}
-
-.btn:hover::after {
-	transform: scale(1.3);
-	/* opacity: 0; */
-}
-
-.btn--green::after {
-	background-color: #c6b497;
-}
-
-.btn--green {
-	background-color: #c6b497;
-	color: white;
-}
+.btn {
+  /* CONFUSING: Why do I need this hover styling to trigger the hover state of ::after */ }
+  .btn:link, .btn:visited {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 5rem;
+    transition: all 0.2s; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5rem;
+    transition: all 0.3s; }
+  .btn:hover::after {
+    transform: scale(1.3); }
+  .btn--green {
+    background-color: #c6b497;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #c6b497; }
 
 .move-in-left {
-	animation: moveInLeft 2.5s ease-out;
-}
+  animation: moveInLeft 2.5s ease-out; }
 
 .move-in-right {
-	animation: moveInRight 2.5s ease-out;
-}
+  animation: moveInRight 2.5s ease-out; }
 
-.skills__container {
-	text-align: center;
-	margin-top: 5rem;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-}
-
-.skill {
-	position: relative;
-	height: 30px;
-	width: 30px;
-	align-self: center;
-	justify-self: center;
-	border-radius: 500px;
-	background-color: aqua;
-	padding: 7rem;
-	transition: all 0.2s;
-	margin: 2rem;
-	animation-name: float;
-	animation-direction: alternate-reverse;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-out;
-}
-
-.skill span {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.skills__skill--javascript {
-	animation-delay: 2s;
-}
-
-.skills__skill--react {
-	animation-delay: 1s;
-}
-
-.skills__skill--spring {
-	animation-delay: 1s;
-}
-
-.skills__skill--redux {
-	animation-delay: 3s;
-}
-
-.skills__skill--typescript {
-	animation-delay: 2s;
-}
-
-.skills__skill--java {
-	animation-delay: 1;
-}
-
-.skills__skill--html {
-	animation-delay: 2;
-}
+.skills {
+  text-align: center;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+  .skills__skill {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50rem;
+    background-color: aqua;
+    padding: 7rem;
+    transition: all 0.2s;
+    margin: 2rem;
+    animation-name: float;
+    animation-direction: alternate-reverse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out; }
+    .skills__skill span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .skills__skill--react, .skills__skill--spring, .skills__skill--java {
+      animation-delay: 1s; }
+    .skills__skill--javascript, .skills__skill--typescript, .skills__skill--html {
+      animation-delay: 2s; }
+    .skills__skill--redux {
+      animation-delay: 3s; }
 
 .experience {
-	color: white;
-	background-color: #839b97;
-}
-
-.experience__company {
-	font-size: 3rem;
-	margin-top: 3rem;
-}
-
-.experience__role {
-	margin-top: 3rem;
-}
+  color: #fff;
+  background-color: #839b97; }
+  .experience__company {
+    font-size: 3rem;
+    margin-top: 3rem; }
+  .experience__role {
+    margin-top: 3rem; }
 
 .about-me {
-	color: white;
-	background-color: #34626c;
-	padding: 5rem 20rem;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes moveInLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-1rem);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes moveInRight {
-	from {
-		opacity: 0;
-		transform: translateX(1rem);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes float {
-	from {
-		transform: translateY(15px);
-	}
-
-	30% {
-		transform: translate(-5px, 5px);
-	}
-
-	50% {
-		transform: translate(10px, 10px);
-	}
-
-	80% {
-		transform: translate(-10px, 10px);
-	}
-
-	to {
-		transform: translateY(0);
-	}
-}
+  color: #fff;
+  background-color: #34626c;
+  padding: 5rem 20rem; }

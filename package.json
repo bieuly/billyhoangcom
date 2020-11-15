@@ -1,0 +1,23 @@
+{
+  "name": "billyhoangcom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bieuly/billyhoangcom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bieuly/billyhoangcom/issues"
+  },
+  "homepage": "https://github.com/bieuly/billyhoangcom#readme"
+}
