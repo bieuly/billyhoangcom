@@ -1,0 +1,30 @@
+.header {
+	background-color: $color-dark-grey;
+	text-align: center;
+
+	&__profile-picture {
+		height: 15rem;
+		clip-path: circle();
+		animation: fadeIn 2s ease-out;
+		transition: all 2s;
+	}
+
+	&__profile-picture:hover {
+		transform: rotate(360deg);
+	}
+
+	&__title {
+		color: $color-white;
+		margin-top: 2rem;
+	}
+
+	&__btns {
+		margin-top: 4rem;
+	}
+
+	&__btns a {
+		margin-right: 3rem;
+		margin-left: 3rem;
+		width: 15rem;
+	}
+}

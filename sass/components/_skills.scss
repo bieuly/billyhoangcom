@@ -1,0 +1,48 @@
+.skills {
+	text-align: center;
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	&__skill {
+		position: relative;
+		height: 3rem;
+		width: 3rem;
+		align-self: center;
+		justify-self: center;
+		border-radius: 50rem;
+		background-color: $color-light-blue;
+		padding: 7rem;
+		transition: all 0.2s;
+		margin: 2rem;
+		animation-name: float;
+		animation-direction: alternate-reverse;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-out;
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&--react,
+		&--spring,
+		&--java {
+			animation-delay: 1s;
+		}
+
+		&--javascript,
+		&--typescript,
+		&--html {
+			animation-delay: 2s;
+		}
+
+		&--redux {
+			animation-delay: 3s;
+		}
+	}
+}

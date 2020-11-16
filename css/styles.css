@@ -1,3 +1,30 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7; }
+
+.title {
+  letter-spacing: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 600; }
+
 @keyframes fadeIn {
   from {
     opacity: 0; }
@@ -32,53 +59,14 @@
   to {
     transform: translateY(0); } }
 
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
+.u-move-in-left {
+  animation: moveInLeft 2.5s ease-out; }
 
-html {
-  font-size: 62.5%; }
+.u-move-in-right {
+  animation: moveInRight 2.5s ease-out; }
 
-body {
-  box-sizing: border-box;
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #777;
-  line-height: 1.7; }
-
-.section {
+.u-section {
   padding: 6rem 6rem; }
-
-.header {
-  background-color: #34626c;
-  text-align: center; }
-  .header__profile-picture {
-    height: 15rem;
-    clip-path: circle();
-    animation: fadeIn 2s ease-out;
-    transition: all 2s; }
-  .header__profile-picture:hover {
-    transform: rotate(360deg); }
-  .header__title {
-    color: #fff;
-    margin-top: 2rem; }
-  .header__btns {
-    margin-top: 4rem; }
-  .header__btns a {
-    margin-right: 3rem;
-    margin-left: 3rem;
-    width: 15rem; }
-
-.title {
-  letter-spacing: 1rem;
-  text-align: center;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  font-weight: 600; }
 
 .btn {
   /* CONFUSING: Why do I need this hover styling to trigger the hover state of ::after */ }
@@ -113,12 +101,6 @@ body {
     .btn--green::after {
       background-color: #c6b497; }
 
-.move-in-left {
-  animation: moveInLeft 2.5s ease-out; }
-
-.move-in-right {
-  animation: moveInRight 2.5s ease-out; }
-
 .skills {
   text-align: center;
   margin-top: 5rem;
@@ -152,6 +134,52 @@ body {
       animation-delay: 2s; }
     .skills__skill--redux {
       animation-delay: 3s; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( (2 * (100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( (2 * (100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( (3 * (100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  background-color: #34626c;
+  text-align: center; }
+  .header__profile-picture {
+    height: 15rem;
+    clip-path: circle();
+    animation: fadeIn 2s ease-out;
+    transition: all 2s; }
+  .header__profile-picture:hover {
+    transform: rotate(360deg); }
+  .header__title {
+    color: #fff;
+    margin-top: 2rem; }
+  .header__btns {
+    margin-top: 4rem; }
+  .header__btns a {
+    margin-right: 3rem;
+    margin-left: 3rem;
+    width: 15rem; }
 
 .experience {
   color: #fff;

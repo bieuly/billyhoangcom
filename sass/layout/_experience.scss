@@ -1,0 +1,13 @@
+.experience {
+	color: $color-white;
+	background-color: $color-dark-green;
+
+	&__company {
+		font-size: 3rem;
+		margin-top: 3rem;
+	}
+
+	&__role {
+		margin-top: 3rem;
+	}
+}

@@ -1,0 +1,8 @@
+@mixin clearfix {
+	// Will apply the clearfix to it's ::after element
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
